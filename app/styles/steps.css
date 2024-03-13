@@ -1,0 +1,11 @@
+.emx-steps h3 {
+  counter-increment: step;
+
+  &:before {
+    @apply emx-absolute emx-w-[33px] emx-h-[33px];
+    @apply emx-border-4 emx-border-white emx-bg-gray-100 dark:emx-border-dark dark:emx-bg-neutral-800;
+    @apply emx-rounded-full emx-text-neutral-400 emx-text-base emx-font-normal emx-text-center -emx-indent-px;
+    @apply emx-mt-[3px] emx-ml-[-41px];
+    content: counter(step);
+  }
+}

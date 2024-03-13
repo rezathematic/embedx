@@ -1,61 +1,43 @@
-'use client'
-
-import { config } from '@/app.config'
-import { useState } from 'react'
-
 export default function Home() {
-  const [gitHubUrl, setGitHubUrl] = useState('')
-  const [baseUrl, setBaseUrl] = useState('')
-  const [apiUrl, setApiUrl] = useState('')
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setGitHubUrl(e.target.value)
-  }
-
-  const generateUrls = () => {
-    const urlSlug = gitHubUrl.replace('https://github.com/', '')
-    const base = `${config.siteUrl}/gh/${urlSlug}`
-    const api = `${config.siteUrl}/api/oembed?url=${encodeURIComponent(base)}&format=json`
-    setBaseUrl(base)
-    setApiUrl(api)
-  }
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex">
-        <div>
-          <pre className="mb-5">
-            https://github.com/octocat/Hello-World/blob/master/README
-          </pre>
-          <input
-            type="text"
-            value={gitHubUrl}
-            onChange={handleChange}
-            placeholder="Paste a GitHub URL"
-            className="rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-          />
-          <button
-            className="ml-3 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            onClick={generateUrls}
+    <main className="emx-flex emx-min-h-screen emx-flex-col emx-items-center emx-justify-between emx-p-24">
+      <div>
+        <div className="emx-relative emx-isolate emx-px-6 emx-pt-14 lg:emx-px-8">
+          <div
+            className="emx-absolute emx-inset-x-0 emx--top-40 emx--z-10 emx-transform-gpu emx-overflow-hidden emx-blur-3xl sm:emx--top-80"
+            aria-hidden="true"
           >
-            Generate
-          </button>
-          {baseUrl && (
-            <div className="mt-4 flex flex-col text-3xl">
-              Base URL:{' '}
-              <a className="text-base" href={baseUrl}>
-                {baseUrl}
-              </a>
+            <div
+              className="emx-relative emx-left-[calc(50%-11rem)] emx-aspect-[1155/678] emx-w-[36.125rem] emx--translate-x-1/2 emx-rotate-[30deg] emx-bg-gradient-to-tr emx-from-[#ff80b5] emx-to-[#9089fc] emx-opacity-30 sm:emx-left-[calc(50%-30rem)] sm:emx-w-[72.1875rem]"
+              style={{
+                clipPath:
+                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'
+              }}
+            />
+          </div>
+          <div className="emx-mx-auto emx-max-w-2xl emx-py-32 sm:emx-py-48 lg:emx-py-56">
+            <div className="emx-text-center">
+              <h1 className="emx-text-4xl emx-font-bold emx-tracking-tight emx-text-gray-900 sm:emx-text-6xl">
+                Generate embed code compatible with Embedly and oEmbed.
+              </h1>
+              <p className="emx-mt-6 emx-text-lg emx-leading-8 emx-text-gray-600">
+                Create embed code that works seamlessly with both Embedly and
+                oEmbed platforms.
+              </p>
             </div>
-          )}
-          {apiUrl && (
-            <div className="mt-4 flex flex-col text-3xl">
-              API URL:{' '}
-              <a className="text-base" href={apiUrl}>
-                {apiUrl}
-              </a>
-            </div>
-          )}
+          </div>
+          <div
+            className="emx-absolute emx-inset-x-0 emx-top-[calc(100%-13rem)] emx--z-10 emx-transform-gpu emx-overflow-hidden emx-blur-3xl sm:emx-top-[calc(100%-30rem)]"
+            aria-hidden="true"
+          >
+            <div
+              className="emx-relative emx-left-[calc(50%+3rem)] emx-aspect-[1155/678] emx-w-[36.125rem] emx--translate-x-1/2 emx-bg-gradient-to-tr emx-from-[#ff80b5] emx-to-[#9089fc] emx-opacity-30 sm:emx-left-[calc(50%+36rem)] sm:emx-w-[72.1875rem]"
+              style={{
+                clipPath:
+                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'
+              }}
+            />
+          </div>
         </div>
       </div>
     </main>

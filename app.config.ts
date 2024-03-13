@@ -1,3 +1,4 @@
 export const config = {
-  siteUrl: 'http://localhost:3000'
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
+  providerName: process.env.NEXT_PUBLIC_PROVIDER_NAME
 }
