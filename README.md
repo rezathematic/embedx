@@ -60,3 +60,12 @@ Response:
   "html": "<iframe width=\"100%\" height=\"113\" src=\"http://localhost:3000/gh/octocat/Hello-World/blob/master/README\" frameborder=\"0\" allowfullscreen=\"true\"></iframe>"
 }
 ```
+
+## Generate Embed Code
+
+To Generate Embed code, go to `/preview` and enter the GitHub URL.
+
+## Deploy
+
+Copy the `.env.example` file and rename it to `.env.local`. Then, set the
+environment variables to the appropriate values.
