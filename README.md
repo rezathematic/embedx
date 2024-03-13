@@ -69,3 +69,8 @@ To Generate Embed code, go to `/preview` and enter the GitHub URL.
 
 Copy the `.env.example` file and rename it to `.env.local`. Then, set the
 environment variables to the appropriate values.
+
+## Demo
+
+https://github.com/rezathematic/embedx/assets/63289278/b3c816f6-2ff4-41df-8a3b-769f34b82d59
+
