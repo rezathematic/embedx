@@ -1,0 +1,17 @@
+.subheading-anchor {
+  @apply emx-opacity-0 emx-transition-opacity ltr:emx-ml-1 rtl:emx-mr-1;
+
+  :hover > &,
+  &:focus {
+    @apply emx-opacity-100;
+  }
+
+  &:after {
+    @apply emx-content-['#'] emx-px-1;
+    @apply emx-text-gray-300 dark:emx-text-neutral-700;
+    span:target + & {
+      @apply emx-text-gray-400;
+      @apply dark:emx-text-neutral-500;
+    }
+  }
+}

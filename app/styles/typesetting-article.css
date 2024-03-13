@@ -1,0 +1,28 @@
+article.emx-body-typesetting-article {
+  font-size: 17px;
+  font-feature-settings:
+    'rlig' 1,
+    'calt' 1;
+  h1 {
+    @apply emx-mt-6 emx-mb-4 emx-text-center;
+    font-size: 2.5rem;
+  }
+  h2 {
+    @apply emx-border-none;
+  }
+  a {
+    @apply emx-no-underline hover:emx-underline;
+  }
+  p {
+    @apply emx-leading-8;
+  }
+  code {
+    @apply emx-border-none dark:emx-bg-neutral-700;
+  }
+  pre code {
+    @apply dark:emx-bg-transparent;
+  }
+  .subheading-anchor + a {
+    @apply emx-no-underline hover:emx-no-underline after:emx-hidden;
+  }
+}
